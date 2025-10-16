@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebCraft</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="overlay" class="overlay">
+      <h1>WebCraft</h1>
+      <p>Klicke, um die Steuerung zu aktivieren.</p>
+      <ul>
+        <li>WASD: Bewegung</li>
+        <li>Leertaste: Springen</li>
+        <li>Linksklick: Block abbauen</li>
+        <li>Rechtsklick: Block platzieren</li>
+        <li>Scrollrad: Blocktyp wechseln</li>
+        <li>Shift: Sprinten</li>
+      </ul>
+    </div>
+    <div class="hud">
+      <div class="crosshair"></div>
+      <div id="block-label" class="block-label"></div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
