@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebCraft</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="menu" class="overlay menu">
+      <div class="menu-card">
+        <header class="menu-header">
+          <div>
+            <h1>WebCraft</h1>
+            <p class="tagline">Baue deine eigene Voxelwelt direkt im Browser.</p>
+          </div>
+          <div class="menu-actions">
+            <button id="start-btn" type="button" class="btn btn-primary">Spiel starten</button>
+            <button id="regen-btn" type="button" class="btn btn-ghost">Neue Welt generieren</button>
+          </div>
+        </header>
+        <div class="menu-body">
+          <section class="settings">
+            <h2>Welteinstellungen</h2>
+            <form id="settings-form">
+              <div class="field">
+                <label for="seed-input">Seed</label>
+                <div class="field-inline">
+                  <input id="seed-input" type="number" min="0" max="9999999" step="1" />
+                  <button id="random-seed" type="button" class="btn btn-mini">Zufall</button>
+                </div>
+              </div>
+              <div class="field">
+                <label for="size-range">Weltgröße <span id="size-display" class="value"></span></label>
+                <input id="size-range" type="range" min="32" max="128" step="16" value="64" />
+              </div>
+              <div class="field">
+                <label for="height-range">Höhe <span id="height-display" class="value"></span></label>
+                <input id="height-range" type="range" min="32" max="72" step="4" value="48" />
+              </div>
+              <div class="field">
+                <label for="roughness-range">Geländerauheit <span id="roughness-display" class="value"></span></label>
+                <input id="roughness-range" type="range" min="20" max="80" step="5" value="45" />
+              </div>
+              <div class="field">
+                <label for="cave-range">Höhlendichte <span id="cave-display" class="value"></span></label>
+                <input id="cave-range" type="range" min="0" max="100" step="10" value="40" />
+              </div>
+              <div class="field">
+                <label for="tree-range">Baumdichte <span id="tree-display" class="value"></span></label>
+                <input id="tree-range" type="range" min="0" max="100" step="10" value="40" />
+              </div>
+            </form>
+          </section>
+          <section class="info">
+            <h2>Steuerung</h2>
+            <ul class="controls">
+              <li><span>WASD</span> bewegen</li>
+              <li><span>Leertaste</span> springen</li>
+              <li><span>Shift</span> sprinten</li>
+              <li><span>Linksklick</span> Block abbauen</li>
+              <li><span>Rechtsklick</span> Block platzieren</li>
+              <li><span>Mausrad</span> Blocktyp wechseln</li>
+              <li><span>ESC</span> Menü öffnen</li>
+            </ul>
+            <p class="hint">Passe die Einstellungen an und klicke auf „Neue Welt generieren“, um sofort eine frische Landschaft zu erhalten.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="hud">
+      <div class="crosshair"></div>
+      <div id="block-label" class="block-label"></div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
