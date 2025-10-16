@@ -35,3 +35,7 @@ Alle Änderungen an den Schiebereglern werden durch einen Klick auf „Neue Welt
 - **Mausrad**: Blocktyp wechseln
 
 Viel Spaß beim Erkunden und Bauen!
+
+## Qualitätssicherung
+
+- `node scripts/check-conflicts.js`: Prüft das Projekt auf versehentlich verbliebene Merge-Konflikt-Markierungen (`<<<<<<<`, `>>>>>>>`).
